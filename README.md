@@ -14,6 +14,10 @@ docker compose up -d
 docker logs orders-api
 ```
 
+Each application log line is JSON with `ts`, `level`, `service`, and `msg` fields.
+Request logs also include a unique `reqId`; see [VALIDATION.md](VALIDATION.md) for the
+error-tracing commands and [CLOUD_LOGGING.md](CLOUD_LOGGING.md) for cloud query mappings.
+
 ## Trigger Error
 
 ```bash
